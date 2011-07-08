@@ -1,0 +1,5 @@
+search compute-1.internal <%= node[:resolver][:search] %>
+nameserver 172.16.0.23
+<% node[:resolver][:nameservers].each do |nameserver| -%>
+nameserver <%= nameserver %>
+<% end -%>
